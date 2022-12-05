@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".setting.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--상단 title 바-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/mint"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="설정"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightGray">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!--멍멍이관리-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/lightGray"
+                    android:gravity="bottom"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="멍멍이관리" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dogList"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!--어플정보-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/lightGray"
+                    android:gravity="bottom"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="어플정보" />
+
+                <!--버전정보-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="버전정보" />
+                    <TextView
+                        android:id="@+id/versionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="15dp"
+                        android:layout_gravity="center"
+                        android:textSize="17sp"
+                        android:textColor="@color/darkGray"
+                        android:text="v 0.0.0" />
+                </LinearLayout>
+
+                <!--버그 또는 문의-->
+                <LinearLayout
+                    android:id="@+id/sendBugMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="버그 또는 문의" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_right" />
+                </LinearLayout>
+
+                <!--앱 평가하기-->
+                <LinearLayout
+                    android:id="@+id/appRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="앱 평가하기" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_right" />
+                </LinearLayout>
+
+                <!--앱 공유하기-->
+                <LinearLayout
+                    android:id="@+id/appShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="앱 공유하기" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_right" />
+                </LinearLayout>
+
+                <!--자주 묻는 질문-->
+                <LinearLayout
+                    android:id="@+id/mostAsk"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="자주 묻는 질문" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_right" />
+                </LinearLayout>
+
+                <!--이용약관-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/lightGray"
+                    android:gravity="bottom"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="이용약관" />
+
+                <!--서비스 이용약관-->
+                <LinearLayout
+                    android:id="@+id/termsAndUseView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="서비스 이용약관" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_right" />
+                </LinearLayout>
+
+                <!--개인정보 보호약관-->
+                <LinearLayout
+                    android:id="@+id/privacyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="개인정보 보호약관" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_right" />
+                </LinearLayout>
+
+                <!--위치서비스 이용약관-->
+                <LinearLayout
+                    android:id="@+id/locationUseView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="위치서비스 이용약관" />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_right" />
+                </LinearLayout>
+
+                <!--계정관리-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/lightGray"
+                    android:gravity="bottom"
+                    android:textColor="@color/black"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="계정관리" />
+
+                <!--회원등급-->
+                <LinearLayout
+                    android:id="@+id/userStatusView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="회원등급" />
+                    <TextView
+                        android:id="@+id/userStatusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="15dp"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:textColor="@color/darkGray"
+                        android:text="일반회원" />
+                </LinearLayout>
+
+                <!--이메일변경-->
+                <LinearLayout
+                    android:id="@+id/mailStatusView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:id="@+id/mailStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="이메일 변경" />
+                    <TextView
+                        android:id="@+id/mailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="15dp"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:textColor="@color/darkGray"
+                        android:text="doggy@day.com" />
+                </LinearLayout>
+
+                <!--로그아웃-->
+                <LinearLayout
+                    android:id="@+id/logoutView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/black"
+                        android:text="로그아웃" />
+                </LinearLayout>
+
+                <!--회원탈퇴-->
+                <LinearLayout
+                    android:id="@+id/secessionView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="1dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/red"
+                        android:text="회원탈퇴" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/lightGray" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settingLoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

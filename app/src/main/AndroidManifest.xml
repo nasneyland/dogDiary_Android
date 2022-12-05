@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.najin.dogdiary">
+
+    <!--인터넷 권한 선언-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--앨범 접근-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--위치정보 얻기-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DogDiary">
+        <activity android:name=".member.SplashActivity">
+<!--        <activity android:name=".member.AdminActivity">-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--member-->
+        <activity android:name=".member.LoginActivity"/>
+        <activity android:name=".member.JoinActivity"/>
+        <activity android:name=".member.MailActivity"/>
+        <activity android:name=".member.PhoneActivity"/>
+        <activity android:name=".member.DogInsertActivity"/>
+        <activity android:name=".member.DogUpdateActivity"/>
+        <!--home-->
+        <activity android:name=".home.HomeActivity"/>
+        <!--information-->
+        <activity android:name=".information.WalkActivity"/>
+        <activity android:name=".information.WalkedActivity"/>
+        <activity android:name=".information.WashActivity"/>
+        <activity android:name=".information.WeightActivity"/>
+        <activity android:name=".information.HeartActivity"/>
+        <activity android:name=".information.MoneyActivity"/>
+        <activity android:name=".information.EtcActivity"/>
+        <!--information update-->
+        <activity android:name=".update.UpdateWalkedActivity"/>
+        <activity android:name=".update.UpdateWeightActivity"/>
+        <activity android:name=".update.UpdateMoneyActivity"/>
+        <activity android:name=".update.UpdateEtcActivity"/>
+        <!--calendar-->
+        <activity android:name=".calendar.CalendarActivity"/>
+        <!--setting-->
+        <activity android:name=".setting.SettingActivity"/>
+        <activity android:name=".setting.MailInsertActivity"/>
+        <activity android:name=".setting.TermsAndUseActivity"/>
+        <activity android:name=".setting.PrivacyActivity"/>
+        <activity android:name=".setting.LocationUseActivity"/>
+        <activity android:name=".setting.FAQActivity"/>
+
+        <!--네이버 지도 ID 지정-->
+       <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="#####"/>
+
+        <!--google admob-->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="#####"/>
+
+        <!--background Service-->
+        <service android:name=".location.MyBackgroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location"/>
+    </application>
+
+</manifest>
+

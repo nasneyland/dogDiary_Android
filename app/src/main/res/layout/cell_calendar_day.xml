@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+        <View
+            android:id="@+id/todayView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_margin="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/circle_calendar_today"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/birthCake"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_margin="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/img_cake"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/calendarDate"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_horizontal"
+            android:text="00"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/list1Text"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/mint"
+            android:text="111"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/list2Text"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/mint"
+            android:text="222"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/list3Text"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/mint"
+            android:text="333"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/list4Text"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/mint"
+            android:text="444"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/addListText"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:text="+n"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="8sp" />
+    </LinearLayout>
+</RelativeLayout>

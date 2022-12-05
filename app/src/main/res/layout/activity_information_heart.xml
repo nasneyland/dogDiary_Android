@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".information.HeartActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/heartDate"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:background="@color/blue"
+        android:text="오늘"
+        android:textSize="25sp"
+        android:fontFamily="@font/cookierunbold"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:gravity="top"
+        android:background="@color/blue"
+        android:text="심장사상충 예방을 했나요?"
+        android:textSize="25sp"
+        android:fontFamily="@font/cookierunbold"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="슬기로운 건강생활"
+            android:fontFamily="@font/cookierunbold"
+            android:textAlignment="center"
+            android:textColor="@color/darkMint"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="한 달에 한 번 심장사상충 예방이 필요해요."
+            android:fontFamily="@font/cookierunregular"
+            android:textAlignment="center"
+            android:textColor="@color/darkGray"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/img_heart_view"/>
+    </LinearLayout>
+    <android.widget.Button
+        android:id="@+id/heartInsertButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        android:text="등록하기"
+        android:textSize="21sp"
+        android:fontFamily="@font/cookierunbold"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/heartLoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

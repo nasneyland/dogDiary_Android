@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".setting.PrivacyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--상단 title 바-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/mint"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="FAQ"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="30dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q.에러를 발견했어요!"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="앱이 최신버전인지 확인해주세요. 구글스토어에서 멍멍한 하루를 검색하시고 업데이트 버튼이 있다면 꼭 업데이트를 해주세요.\n최신버전에서 발생한 에러는 설정에서 문의하기 또는 리뷰에 남겨주세요. 저희 멍멍한하루 개발자가 바로 해결해드립니다."
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/darkGray"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q.산책 경로가 나타나지 않아요!"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="산책 경로는 위치기반 서비스입니다. 앱 설정에서 멍멍한하루 어플의 위치접근을 허용했는지 확인해주세요.\n산책 중 잠시 다른 어플을 사용하거나 화면을 꺼도 경로 측정이 가능합니다. 하지만 전원을 아예 끄거나 어플을 종료하면 측정이 종료됩니다.\n산책경로는 사용자의 GPS를 불러오는 기능으로 위치에 따라 오차가 생길 수 있습니다."
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/darkGray"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q.여러 핸드폰에서 로그인할 수 있나요?"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="네! 가족들과 혹은 친구들과 함께 강아지 정보를 관리하는 경우 하나의 번호로 여러 대의 핸드폰에서 로그인하시면 동시 접속이 가능합니다."
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/darkGray"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q.서버 접속에 실패했을 때 어떻게 하나요?"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="서버와의 접속이 불안정할 때는 10분 정도 후에 다시 접속을 해주세요. 많은 멍멍이들의 스케줄을 관리하느라 서버가 조금 쉬어가는 시간이랍니다.\n10분 이상 지속될 경우 개발자에게 문의메일을 남겨주세요."
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/darkGray"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Q.핸드폰 번호를 바꿔야 하는데 어떻게 하죠?"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="문자인증으로 로그인하는 어플의 특성상 핸드폰 번호가 회원의 ID가 됩니다. 하지만 번호를 바꾸는 회원님의 경우 이메일로 로그인하고 핸드폰번호를 변경할 수 있습니다.\n번호 변경 전에는 꼭 이메일을 등록해주세요."
+                    android:paddingLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/darkGray"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

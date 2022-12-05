@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mint"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/todayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:fontFamily="@font/cafe24ohsquare"
+                    android:text="2021년 1월 1일"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/birthImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/img_birth" />
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:scaleType="centerCrop"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="120dp"
+                    android:elevation="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/img_profile" />
+
+                <LinearLayout
+                    android:id="@+id/dogInfoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="230dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/rectangle_home_background">
+
+                        <ImageButton
+                            android:id="@+id/calendarButton"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/img_calendar"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/settingButton"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@null"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/img_setting"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="90dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/dogName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="26sp"
+                            android:fontFamily="@font/cookierunbold"
+                            android:textColor="@color/black"
+                            android:text="멍멍이 🐶"
+                            android:textAlignment="center"
+                            android:textSize="23sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/gray"
+                                    android:fontFamily="@font/cafe24ohsquareair"
+                                    android:text="태어난지" />
+
+                                <TextView
+                                    android:id="@+id/dogAge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/cafe24ohsquareair"
+                                    android:text="-" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:background="@color/black"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="40dp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/gray"
+                                    android:fontFamily="@font/cafe24ohsquareair"
+                                    android:text="사람나이" />
+
+                                <TextView
+                                    android:id="@+id/dogHumanAge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/cafe24ohsquareair"
+                                    android:text="-" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <android.widget.Button
+                            android:id="@+id/insertDogButton"
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_member_enable"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight = "0"
+                            android:text="등록하기" />
+                        <LinearLayout
+                            android:id="@+id/insertInfoButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+                            <ImageButton
+                                android:id="@+id/walkButton"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/img_walk"
+                                android:scaleType="centerCrop"
+                                android:padding="0dp"/>
+                            <ImageButton
+                                android:id="@+id/washButton"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/img_wash"
+                                android:scaleType="centerCrop"
+                                android:padding="0dp"/>
+                            <ImageButton
+                                android:id="@+id/weightButton"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/img_weight"
+                                android:scaleType="centerCrop"
+                                android:padding="0dp"/>
+                            <ImageButton
+                                android:id="@+id/heartButton"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/img_heart"
+                                android:scaleType="centerCrop"
+                                android:padding="0dp"/>
+                            <ImageButton
+                                android:id="@+id/moneyButton"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/img_money"
+                                android:scaleType="centerCrop"
+                                android:padding="0dp"/>
+                            <ImageButton
+                                android:id="@+id/etcButton"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/img_etc"
+                                android:scaleType="centerCrop"
+                                android:padding="0dp"/>
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lastDayArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rectangle_home_background"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:text="심장사상충" />
+
+                            <TextView
+                                android:id="@+id/lastHeartDay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:textAlignment="center"
+                                android:textSize="20sp"
+                                android:paddingBottom="1dp"
+                                android:textColor="@color/black"
+                                android:text="-" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:background="@drawable/rectangle_home_background"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:text="목욕" />
+
+                            <TextView
+                                android:id="@+id/lastWashDay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:paddingBottom="1dp"
+                                android:text="-" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/rectangle_home_background"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:text="몸무게" />
+
+                            <TextView
+                                android:id="@+id/lastWeight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:textAlignment="center"
+                                android:textSize="20sp"
+                                android:paddingBottom="1dp"
+                                android:textColor="@color/black"
+                                android:text="-" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--몸무게 그래프-->
+                    <LinearLayout
+                        android:id="@+id/weightArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rectangle_home_background"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:text="몸무게 그래프" />
+                            <TextView
+                                android:id="@+id/weightTypeText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/gray"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:drawableRight="@drawable/img_repeat"
+                                android:text="최근 몸무게 변화량 " />
+                        </LinearLayout>
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/weightChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/weightMinText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingLeft="20dp"
+                                android:textAlignment="viewStart"
+                                android:textSize="11sp"
+                                android:text="0000-00-00"/>
+                            <TextView
+                                android:id="@+id/weightMaxText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingRight="20dp"
+                                android:textAlignment="viewEnd"
+                                android:textSize="11sp"
+                                android:text="0000-00-00"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--이번달 산책-->
+                    <LinearLayout
+                        android:id="@+id/walkArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="380dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rectangle_home_background"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:textSize="15sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/spoqahansansneobold"
+                            android:text="이번달 산책 통계" />
+
+                        <LinearLayout
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/walkDistance"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/darkGray"
+                                    android:textSize="25sp"
+                                    android:fontFamily="@font/spoqahansansneobold"
+                                    android:text="0km" />
+
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/gray"
+                                    android:fontFamily="@font/spoqahansansneobold"
+                                    android:text="평균거리" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/walkMinutes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:textSize="25sp"
+                                    android:textColor="@color/darkGray"
+                                    android:fontFamily="@font/spoqahansansneobold"
+                                    android:text="0분" />
+
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/gray"
+                                    android:fontFamily="@font/spoqahansansneobold"
+                                    android:text="평균시간" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <GridView
+                            android:id="@+id/monthView"
+                            android:layout_width="280dp"
+                            android:layout_height="280dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:listSelector="@color/white"
+                            android:numColumns="7"/>
+                    </LinearLayout>
+
+                    <!--이번달 지출-->
+                    <LinearLayout
+                        android:id="@+id/moneyArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="50dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rectangle_home_background"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:textColor="@color/black"
+                                android:text="이번달 총 지출" />
+                            <TextView
+                                android:id="@+id/totalMoneyText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="15sp"
+                                android:textColor="@color/red"
+                                android:fontFamily="@font/spoqahansansneobold"
+                                android:text="0원" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/darkGray"
+                                    android:text="사료/간식"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/darkGray"
+                                    android:text="장난감"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/darkGray"
+                                    android:text="병원"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/darkGray"
+                                    android:text="미용/의류"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:textColor="@color/darkGray"
+                                    android:text="기타"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+                                <ProgressBar
+                                    android:id="@+id/moneyProgress1"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_weight="1"
+                                    android:padding="3dp"
+                                    android:progressDrawable="@drawable/progress_money"
+                                    android:progressBackgroundTint="@color/lightGray"
+                                    android:progressTint="@color/lightRed"
+                                    android:layout_gravity="center"
+                                    android:max="100"
+                                    android:progress="0" />
+                                <ProgressBar
+                                    android:id="@+id/moneyProgress2"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_weight="1"
+                                    android:padding="3dp"
+                                    android:progressDrawable="@drawable/progress_money"
+                                    android:progressBackgroundTint="@color/lightGray"
+                                    android:progressTint="@color/lightYellow"
+                                    android:layout_gravity="center"
+                                    android:max="100"
+                                    android:progress="0" />
+                                <ProgressBar
+                                    android:id="@+id/moneyProgress3"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_weight="1"
+                                    android:padding="3dp"
+                                    android:progressDrawable="@drawable/progress_money"
+                                    android:progressBackgroundTint="@color/lightGray"
+                                    android:progressTint="@color/lightGreen"
+                                    android:layout_gravity="center"
+                                    android:max="100"
+                                    android:progress="0" />
+                                <ProgressBar
+                                    android:id="@+id/moneyProgress4"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_weight="1"
+                                    android:padding="3dp"
+                                    android:progressDrawable="@drawable/progress_money"
+                                    android:progressBackgroundTint="@color/lightGray"
+                                    android:progressTint="@color/lightBlue"
+                                    android:layout_gravity="center"
+                                    android:max="100"
+                                    android:progress="0" />
+                                <ProgressBar
+                                    android:id="@+id/moneyProgress5"
+                                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_weight="1"
+                                    android:padding="3dp"
+                                    android:progressDrawable="@drawable/progress_money"
+                                    android:progressBackgroundTint="@color/lightGray"
+                                    android:progressTint="@color/lightPurple"
+                                    android:layout_gravity="center"
+                                    android:max="100"
+                                    android:progress="0" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/moneyPercent1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/blue"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:text="0%"/>
+                                <TextView
+                                    android:id="@+id/moneyPercent2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/blue"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:text="0%"/>
+                                <TextView
+                                    android:id="@+id/moneyPercent3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/blue"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:text="0%"/>
+                                <TextView
+                                    android:id="@+id/moneyPercent4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/blue"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:text="0%"/>
+                                <TextView
+                                    android:id="@+id/moneyPercent5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/blue"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:text="0%"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calendarLoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mint">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/img_dog" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cookierunbold"
+                android:text="달력 로딩중"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cookierunbold"
+                android:text="잠시만 기다려주세요"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

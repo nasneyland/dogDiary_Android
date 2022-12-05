@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".update.UpdateMoneyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:background="@color/purple"
+            android:text="지출 수정하기"
+            android:textSize="25sp"
+            android:fontFamily="@font/cookierunbold"
+            android:textColor="@color/white"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_member_background"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp">
+
+                <!--지출 날짜-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:text="날짜를 선택해주세요." />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/moneyUpdateDateText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangle_underline"
+                        android:hint="날짜를 입력해주세요"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/darkGray"
+                        android:textColorHint="@color/gray"
+                        android:paddingLeft="10dp"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/img_calendar" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:text="분류"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <android.widget.Button
+                        android:id="@+id/foodUpdateButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_border_unselect"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/gray"
+                        android:text="사료/간식"/>
+                    <android.widget.Button
+                        android:id="@+id/toyUpdateButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_border_unselect"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/gray"
+                        android:text="장난감"/>
+                    <android.widget.Button
+                        android:id="@+id/hospitalUpdateButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_border_unselect"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/gray"
+                        android:text="병원"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <android.widget.Button
+                        android:id="@+id/beautyUpdateButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_border_unselect"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/gray"
+                        android:text="미용/의류"/>
+                    <android.widget.Button
+                        android:id="@+id/etcUpdateButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_border_unselect"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/gray"
+                        android:text="기타"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:text="지출내역"/>
+                <EditText
+                    android:id="@+id/moneyUpdateItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_common"
+                    android:inputType="text"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:ems="10" />
+                <TextView
+                    android:id="@+id/checkUpdateItemText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="내역을 입력해주세요."
+                    android:textColor="@color/red"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="금액"/>
+                <EditText
+                    android:id="@+id/moneyUpdatePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_common"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:ems="10"
+                    android:inputType="number" />
+                <TextView
+                    android:id="@+id/checkUpdatePriceText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="금액을 입력해주세요."
+                    android:textColor="@color/red"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </ScrollView>
+        <android.widget.Button
+            android:id="@+id/moneyUpdateButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/purple"
+            android:text="수정하기"
+            android:textSize="21sp"
+            android:fontFamily="@font/cookierunbold"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/moneyUpdateLoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

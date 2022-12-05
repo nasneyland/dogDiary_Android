@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".information.WalkedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/walkDate"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@color/red"
+            android:fontFamily="@font/cookierunbold"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="오늘"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/red"
+            android:fontFamily="@font/cookierunbold"
+            android:gravity="top"
+            android:paddingLeft="20dp"
+            android:text="산책시간을 기록해주세요!"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/back_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_member_background"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp">
+
+                <!--산책 시작 시간-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="언제 산책을 했나요?"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/walkStartTimeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangle_underline"
+                        android:hint="시작 시간"
+                        android:textColorHint="@color/gray"
+                        android:textColor="@color/darkGray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textSize="13sp" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/img_walking" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/checkWalkStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="산책 시작 시간을 입력해주세요."
+                    android:textColor="@color/red"
+                    android:textSize="12sp"/>
+
+                <!--산책 시간-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="얼마나 산책을 했나요?"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/walkTimeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangle_underline"
+                        android:hint="산책 시간"
+                        android:textColorHint="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/darkGray"
+                        android:textSize="13sp" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/img_clock" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/checkWalkTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="산책 시간을 입력해주세요."
+                    android:textColor="@color/red"
+                    android:textSize="12sp"/>
+
+                <!--산책 거리-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:text="몇 km를 걸었나요?"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+                    <EditText
+                        android:id="@+id/walkDistanceText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangle_underline"
+                        android:hint="산책 거리"
+                        android:textColorHint="@color/gray"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/darkGray"
+                        android:textSize="13sp" />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/img_map" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/checkWalkDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="산책 거리를 입력해주세요."
+                    android:textColor="@color/red"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <android.widget.Button
+            android:id="@+id/walkInsertButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/red"
+            android:fontFamily="@font/cookierunbold"
+            android:text="등록하기"
+            android:textColor="@color/white"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/walkedLoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
